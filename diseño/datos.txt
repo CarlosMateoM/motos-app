@@ -1,0 +1,37 @@
+https://paletadecolores.online/azul/indigo/
+VALIDAR USUARIOS
+
+estudiante {
+	id,
+	usuario,
+	password,
+	telefono,
+	id_powercampus
+}
+
+
+road {
+	id,
+	estudiante.id,
+	companero_ruta.id
+}
+
+companero_ruta {	
+	id,
+	user,
+	password,
+	phone,
+	status,
+	id_powercampus
+}
+
+puntuacion {
+	id
+	road
+_id,
+	puntuacion,
+	commentario
+}
+
+
+

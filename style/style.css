@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    margin-top: 20px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 53, 0.5);
+}
+
+input::placeholder{
+    color: rgba(0, 0, 53, 0.5);
+}
+
+.nav {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    background-color: #5a5a85;
+}
+
+.title {
+    font-size: 32px;
+    font-family: 'Bungee Spice', cursive
+}
+
+
+.main_container{
+    font-family: 'Roboto', sans-serif;
+    max-width: 400px;
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.signUp_title {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.sumit_btn {
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: #000035;
+}
+
+.welcome_message {
+    margin: 10px 0px 0px 10px;
+}
+
+.card {
+    color: rgb(73, 72, 72);
+    display: flex;
+    background-color: #1c4c96;
+    background-color: #607ec9;
+    background-color: #f8de7e;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.card div > button {
+    color: rgb(66, 63, 63);
+    height: 35px;
+    width: 120px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #9bfab0;
+    background-color: #f8de7e;
+}
+
+.card div > button:hover {
+    color: rgb(46, 44, 44);
+    height: 35px;
+    width: 120px;
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(115, 190, 190);
+}
+
+
+.rating {
+    
+    margin-top: 10px;
+}

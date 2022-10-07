@@ -65,7 +65,6 @@ input::placeholder{
 
 .card {
     color: rgb(73, 72, 72);
-    display: flex;
     background-color: #1c4c96;
     background-color: #607ec9;
     background-color: #f8de7e;
@@ -73,14 +72,39 @@ input::placeholder{
     margin: 20px;
 }
 
+.card > hr {
+    color: #000000;
+    margin: auto;
+    width: 80%;
+}
+
+.card_roads {
+    border-top: 1px solid ;
+    padding: 5px;
+    margin: auto;
+    width: 80%;
+}
+
+.road_title {
+    font-size: 12px;
+    text-align: left;
+}
+
+.card_info {
+    padding: 10px;
+    display: flex;
+}
+
+
 .card div > button {
     color: rgb(66, 63, 63);
     height: 35px;
     width: 120px;
-    border: 1px solid;
+    border: none;
     border-radius: 10px;
     background-color: #9bfab0;
     background-color: #f8de7e;
+    background-color: #ffffff;
 }
 
 .card div > button:hover {
@@ -90,10 +114,18 @@ input::placeholder{
     border:none;
     border-radius: 10px;
     background-color: rgb(115, 190, 190);
+    background-color: #f1cc46;
+
 }
 
+.rutas {
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 .rating {
-    
     margin-top: 10px;
 }

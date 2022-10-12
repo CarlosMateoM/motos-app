@@ -1,0 +1,100 @@
+:root{
+    --font-style: 'Nunito Sans', sans-serif;
+}
+
+body{
+    background-color: #0D1117;
+    font-family: var(--font-style);
+}
+
+.join-box{
+    position: absolute;
+    top: 8%;
+    left: 31%;
+    width: 400px;
+    padding: 5%;
+    transform: (-50% -50%);
+    background: #161B22;
+    border-radius: 10px;
+}
+
+.join-box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.join-box .join-input input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 100%;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.join-box .join-input label{
+    position: relative;
+    left: 0;
+    top: -60px;
+    padding: auto;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.join-box .join-input input:focus~label,
+.join-box .join-input input:valid~label{
+
+    top: -85px;
+    left: 0;
+    color: #04BF9D;
+    font-size: 12px;    
+}
+
+#join{
+    padding: 10px 20px;
+    color: #CBBDDB;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    border: 1px solid #04BF9D;
+    margin: auto;
+}
+
+#join:hover{
+    color: #fff;
+    background-color: #04BF9D;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #04BF9D, 0 0 25px #04BF9D, 0 0 25px #04BF9D, 0 0 10px #04BF9D;
+}
+
+.button-join{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#SignIn{
+    font-size: 14px;
+    text-decoration: none;
+    color: #CBBDDB;
+    margin: 50px 0 0 72px;
+    width: 60px;
+    text-align: center;
+}
+
+.SignIn-content a{
+    margin: auto;
+    color: #04BF9D;
+    text-decoration: none;
+}

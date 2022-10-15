@@ -72,6 +72,7 @@ body{
     transition: .5s;
     letter-spacing: 4px;
     border: 1px solid #04BF9D;
+    background: #0D1117;
     margin: auto;
 }
 
@@ -86,6 +87,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    justify-content: space-between;
 }
 
 #register{
@@ -101,4 +103,9 @@ body{
     margin: auto;
     color: #04BF9D;
     text-decoration: none;
+}
+
+
+.error {
+    color: rgb(255, 37, 37);
 }

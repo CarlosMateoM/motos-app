@@ -17,7 +17,7 @@
     <main class="main">
         <div class="login-box">
             <h2 class="login-tittle">Sign in</h2>
-            
+
             <form class="Login-form" action="./php/login.php" method="post">
                 <div class="user-box">
                     <input type="text" id="user" name="username" required="">
@@ -27,15 +27,12 @@
                     <input type="password" id="password" name="password" required="">
                     <label for="password">Password</label>
                 </div>
-                <?php 
+                <?php
                 $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-                if(strpos($url, "login=incorrect_credentials")){
+                if (strpos($url, "login=incorrect_credentials")) {
                     echo "<p class='error'>¡username or password wrong!</p>";
                 }
-
                 ?>
-
                 <style>
                     .error {
                         color: red;

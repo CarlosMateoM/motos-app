@@ -20,7 +20,14 @@
 
             <form class="Login-form" action="./php/login.php" method="post">
                 <div class="user-box">
-                    <input type="text" id="user" name="username" required="">
+                    <?php
+                        if (isset($_GET['username'])) {
+                            $username = $_GET['username'];
+                            echo "<input type='text' id='user' name='username' required='' value=$username >";
+                        }else {
+                            echo "<input type='text' id='user' name='username' required=''>";
+                        }
+                    ?>
                     <label for="user">Username o email address</label>
                 </div>
                 <div class="user-box">
@@ -33,11 +40,6 @@
                     echo "<p class='error'>¡username or password wrong!</p>";
                 }
                 ?>
-                <style>
-                    .error {
-                        color: red;
-                    }
-                </style>
                 <div class="button-form">
                     <div>
                         <input type="submit" id="submit" value="Login"></input>

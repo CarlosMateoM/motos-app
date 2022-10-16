@@ -13,7 +13,7 @@
     <main class="main">
         <div class="join-box">
             <h2 class="title-SignUp">Join</h2>
-            <form class="join-form">
+            <form class="join-form" action="php/j2oin.php" method="post">
                 
                 <div class="join-input">
                     <input type="number" id="IDP" name="" required="">
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="button-join">
-                    <a id="join" href="#">Create account</a>
+                    <input id="join" href="#">
                 </div>
 
                 <div class="SignIn-content">
@@ -50,8 +50,6 @@
                     <a href="./login.php">Sing in</a>
                 </div>
             </form>
-
-
         </div>
     </main>
 </body>

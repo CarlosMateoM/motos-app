@@ -46,7 +46,7 @@
                     </div>
                     <div id="register-content">
                         <span id="register">Don't have account</span>
-                        <a href="">Register</a>
+                        <a href="join.php">Register</a>
                     </div>
                 </div>
             </form>

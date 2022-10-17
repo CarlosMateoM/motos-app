@@ -18,15 +18,19 @@
         <div class="login-box">
             <h2 class="login-tittle">Sign in</h2>
 
-            <form class="Login-form" action="./php/login.php" method="post">
+            <form class="Login-form" action="./includes/login.inc.php" method="post">
                 <div class="user-box">
                     <?php
-                        if (isset($_GET['username'])) {
-                            $username = $_GET['username'];
-                            echo "<input type='text' id='user' name='username' required='' value=$username >";
-                        }else {
-                            echo "<input type='text' id='user' name='username' required=''>";
-                        }
+
+                    $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                    if (isset($_GET['username'])) {
+                        $username = $_GET['username'];
+                        echo "<input type='text' id='user' name='username' required='' value=$username >";
+                    } else {
+                        echo "<input type='text' id='user' name='username' required=''>";
+                    }
+
                     ?>
                     <label for="user">Username o email address</label>
                 </div>
@@ -34,15 +38,20 @@
                     <input type="password" id="password" name="password" required="">
                     <label for="password">Password</label>
                 </div>
+                <div>
+                    <span id="register" >
+                        <input type="checkbox">
+                        Remember user
+                    </span>
+                </div>
                 <?php
-                $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                 if (strpos($url, "login=incorrect_credentials")) {
                     echo "<p class='error'>¡username or password wrong!</p>";
                 }
                 ?>
                 <div class="button-form">
                     <div>
-                        <input type="submit" id="submit" value="Login"></input>
+                        <input name="login-btn" type="submit" id="submit" value="Login"></input>
                     </div>
                     <div id="register-content">
                         <span id="register">Don't have account</span>

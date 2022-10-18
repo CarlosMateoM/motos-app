@@ -30,7 +30,9 @@ if (isset($_POST['login-btn'])) {
 
     if ($row = $result->fetch_array(MYSQLI_NUM)) {
         if (password_verify($password, $row[2])) {
-            echo 'sesión iniciada';
+            session_start();
+            $_SESSION['idEstudiante'] = $row[1];
+            //header("locat")
         } else {
             header("location: ./../login.php?login=incorrect_credentials&username=$username");
             exit();
@@ -41,7 +43,4 @@ if (isset($_POST['login-btn'])) {
     header("location: ./../login.php");
     exit();
 }
-/*while ($row = $result->fetch_array(MYSQLI_NUM)) {
-    echo $row[1], $row[2];
-    echo password_hash("123456", PASSWORD_BCRYPT);
-}*/
+

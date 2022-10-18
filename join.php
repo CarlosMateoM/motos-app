@@ -22,19 +22,31 @@
                     $error = $_GET['error'];
                     if ($error == "emptyfields") {
                         echo "<p style='color: red'> llene todos los campos </p>";
-                    }else if($error == "id_power_wrong"){
+                    }
+                    else if($error == "id_power_wrong"){
                         echo "<p style='color: red'> ¡ID Power Campus no valido! </p>";
-                    }else if($error == "id_wrong"){
+                    }
+                    else if($error == "id_wrong"){
                         echo "<p style='color: red'> ¡Número de identificacion no valido! </p>";
-                    }else if($error == "username_wrong"){
+                    }
+                    else if($error == "username_wrong"){
                         echo "<p style='color: red'> ¡Username no valido! </p>";
-                    }else if($error == "name_wrong"){
+                    }
+                    else if($error == "name_wrong"){
                         echo "<p style='color: red'> ¡Nombre no valido! </p>";
-                    }else if($error == "email_wrong"){
+                    }
+                    else if($error == "email_wrong"){
                         echo "<p style='color: red'> ¡Email no valido! </p>";
-                    }else if ($error == "password_wrong"){
+                    }
+                    else if ($error == "password_wrong"){
                         echo "<p style='color: red'> ¡Password no coincide! </p>";
-                    } 
+                    }
+                    else if($error == "usernamenotavailable"){
+                        echo "<p style='color: red'> ¡Username no disponible! </p>";
+                    }
+                    else if($error == "phone_wrong"){
+                        echo "<p style='color: red'> ¡Telefono no valido! </p>";
+                    }
                 }
 
                 ?>
@@ -92,6 +104,20 @@
                     
                     ?>
                     <label for="nombre">Name</label>
+                </div>
+
+                <div class="join-input">
+                    <?php 
+                    
+                        if(isset($_GET['telefono'])){
+                            echo "<input type='tel' id='usuario' name='telefono' required=''value=".$_GET['telefono'].">";
+                        }else {
+                            echo "<input type='tel' id='usuario' name='telefono' required=''>";
+                        }
+                    
+                    ?>
+
+                    <label for="usuario">Enter a phone</label>
                 </div>
 
                 <div class="join-input">

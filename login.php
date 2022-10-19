@@ -50,7 +50,7 @@
                 }
                 ?>
                 <div class="button-form">
-                    <div>
+                    <div class="submit-button">
                         <input name="login-btn" type="submit" id="submit" value="Login"></input>
                     </div>
                     <div id="register-content">

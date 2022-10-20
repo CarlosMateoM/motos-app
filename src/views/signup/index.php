@@ -15,7 +15,7 @@
     <main class="main">
         <div class="join-box">
             <h2 class="title-SignUp">Join</h2>
-            <form class="join-form" action="./includes/join.inc.php" method="post">
+            <form class="join-form" action="createaccount" method="post">
 
                 <?php
                 if (isset($_GET['error'])) {
@@ -41,11 +41,11 @@
                     else if ($error == "password_wrong"){
                         echo "<p style='color: red'> ¡Password no coincide! </p>";
                     }
-                    else if($error == "usernamenotavailable"){
-                        echo "<p style='color: red'> ¡Username no disponible! </p>";
-                    }
                     else if($error == "phone_wrong"){
                         echo "<p style='color: red'> ¡Telefono no valido! </p>";
+                    }
+                    else if($error == "username_unavailable"){
+                        echo "<p style='color: red'> ¡Username no disponible! </p>";
                     }
                 }
 
@@ -71,7 +71,7 @@
                     if(isset($_GET['id'])){
                         echo "<input type='number' id='DNI' name='id_identificacion' required='' value=".$_GET['id'].">";
                     }else {
-                        echo "<input type='number' id='DNI' name='id_identificacion' required=''>";
+                        echo "<input type='number' id='DNI' name='id_identificacion' required='' >";
                     }
                     
                     ?>
@@ -99,7 +99,7 @@
                     if(isset($_GET['name'])){
                         echo "<input type='text' id='nombre' name='name' required='' value=".$_GET['name'].">";
                     }else {
-                        echo "<input type='text' id='nombre' name='name' required=''>";
+                        echo "<input type='text' id='nombre' name='name' required='' >";
                     }
                     
                     ?>
@@ -135,12 +135,12 @@
                 </div>
 
                 <div class="join-input">
-                    <input type="password" id="password" name="password" required="">
+                    <input type="password" id="password" name="password" required="" value="123456">
                     <label for="password">Create a password</label>
                 </div>
 
                 <div class="join-input">
-                    <input type="password" id="password" name="re-password" required="">
+                    <input type="password" id="password" name="re-password" required="" value="123456">
                     <label for="password">Repeat password</label>
                 </div>
 
@@ -150,7 +150,7 @@
 
                 <div class="SignIn-content">
                     <span id="SignIn">do you already have an account?</span>
-                    <a href="./login.php">Sing in</a>
+                    <a href="login">Sing in</a>
                 </div>
             </form>
         </div>

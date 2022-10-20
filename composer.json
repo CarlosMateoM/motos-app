@@ -1,0 +1,22 @@
+{
+    "name": "mateo/motos-app",
+    "autoload": {
+        "psr-4": {
+            "Mateo\\MotosApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CarlosMateoM",
+            "email": "carlosmateo484@gmail.com"
+        },
+        {
+            "name": "Jaxloz",
+            "email": "x@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

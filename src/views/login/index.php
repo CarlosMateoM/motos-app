@@ -18,7 +18,7 @@
         <div class="login-box">
             <h2 class="login-tittle">Sign in</h2>
 
-            <form class="Login-form" action="./includes/login.inc.php" method="post">
+            <form class="Login-form" action="authenticate" method="post">
                 <div class="user-box">
                     <?php
 
@@ -55,7 +55,7 @@
                     </div>
                     <div id="register-content">
                         <span id="register">Don't have account</span>
-                        <a href="join.php">Register</a>
+                        <a href="signup">Register</a>
                     </div>
                 </div>
             </form>

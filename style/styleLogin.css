@@ -108,3 +108,29 @@ body{
 .error {
     color: rgb(255, 37, 37);
 }
+
+@media screen and (max-width:  500px) {
+    
+    .login-box{
+        width: 200px;
+    }
+
+    .login-box h2{
+        font-size: 18px;
+    }
+
+    .button-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #submit{
+        margin: auto 50px auto ;
+    }
+
+    #register-content{
+        margin-top: 20px;
+    }
+
+}

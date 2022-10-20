@@ -5,12 +5,13 @@
 body{
     background-color: #0D1117;
     font-family: var(--font-style);
+    
 }
 
 .join-box{
     position: absolute;
     top: 8%;
-    left: 31%;
+    left: 28%;
     width: 400px;
     padding: 5%;
     transform: (-50% -50%);

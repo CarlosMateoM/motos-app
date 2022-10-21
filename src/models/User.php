@@ -50,6 +50,12 @@ class User extends Model
         $this->id = $id;
     }
 
+    public function getId():int
+    {
+        return $this->id;
+    }
+
+
     public function setEstado(bool $estado)
     {
         $this->estado = $estado;
@@ -160,6 +166,24 @@ class User extends Model
             error_log($e->getMessage());
             throw $e;
             return false;
+        }
+    }
+
+    public static function set_estado(bool $estado, int $id_est)
+    {
+        try {
+            $db = new Database();
+            $sql = "UPDATE `ESTUDIANTE` SET `ESTADO`= ? WHERE `idESTUDIANTE` = ?";
+            $query = $db->connect()->prepare($sql);
+            $query->bindParam(1, $estado, PDO::PARAM_BOOL);
+            $query->bindParam(2, $id_est, PDO::PARAM_INT);
+            $query->execute();
+            
+        } catch (PDOException $e) {
+            echo $id_est;
+            error_log($e->getMessage());
+            throw $e;
+            
         }
     }
 }

@@ -14,7 +14,7 @@
 <body>
     <main class="main">
         <div class="join-box">
-            <h2 class="title-SignUp">Join</h2>
+            <h2 class="title-SignUp">Register</h2>
             <form class="join-form" action="createaccount" method="post">
 
                 <?php

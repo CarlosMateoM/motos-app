@@ -54,7 +54,7 @@
                         <input name="login-btn" type="submit" id="submit" value="Login"></input>
                     </div>
                     <div id="register-content">
-                        <span id="register">Don't have account</span>
+                        <span id="register">Don't have account?</span>
                         <a href="signup">Register</a>
                     </div>
                 </div>

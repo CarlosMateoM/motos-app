@@ -3,6 +3,7 @@
 use Mateo\MotosApp\controllers\Signup;
 use Mateo\MotosApp\controllers\Login;
 use Mateo\MotosApp\controllers\Home;
+use Mateo\MotosApp\models\User;
 
 require_once __DIR__ . './../../vendor/autoload.php';
 
@@ -19,6 +20,7 @@ function require_authentication(){
         exit();
     }
 }
+
 
 $router->get('/signup', function(){
     $controller = new Signup;
@@ -42,8 +44,14 @@ $router->post('/authenticate', function(){
 
 $router->get('/home', function(){
     require_authentication();
-    $controller = new Home;
+    $controller = new Home(unserialize($_SESSION['user']));
     $controller->render('home/index');
+});
+
+
+$router->post('/logout', function(){
+    $controller = new Home(unserialize($_SESSION['user']));
+    $controller->log_out();
 });
 
 

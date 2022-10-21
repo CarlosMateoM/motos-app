@@ -37,6 +37,7 @@ class Login extends Controller
         if(password_verify($password, $hash_password)){
             session_start();
             $_SESSION['user'] = serialize($user);
+            User::set_estado(true, $user->getId());
             header("location: /motos-app/home");
             exit();
         }else {

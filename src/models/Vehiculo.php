@@ -33,5 +33,34 @@ class User extends Model
         $this->tipo = $tipo;
     }
 
+    public function save()
+    {
+        try {
+
+            $sql = "INSERT INTO `VEHICULO`(`ESTUDIANTE_idESTUDIANTE`, `PLACA`, `TIPO`, `MARCA`, `COLOR`) VALUES (?, ?, ?, ?, ?)";
+            
+            $query = $this->prepare($sql);
+
+            $query->bindParam(1, $this->idEstudiante, PDO::PARAM_INT);
+            $query->bindParam(2, $this->placa, PDO::PARAM_STR);
+            $query->bindParam(3, $this->tipo, PDO::PARAM_STR);
+            $query->bindParam(4, $this->marca, PDO::PARAM_INT);
+            $query->bindParam(5, $this->color, PDO::PARAM_STR);
+            
+            $query->execute();
+
+            if($query){
+                return true;
+            }
+
+        } catch (PDOException $e) {
+            error_log($e->getMessage());
+            throw $e;
+            return false;
+        }
+    }
+
+
+
 
 }

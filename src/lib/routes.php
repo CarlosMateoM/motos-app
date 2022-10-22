@@ -50,8 +50,15 @@ $router->get('/home', function(){
 
 
 $router->post('/logout', function(){
+    require_authentication();
     $controller = new Home(unserialize($_SESSION['user']));
     $controller->log_out();
+});
+
+$router->post('/saveVehicle', function(){
+    require_authentication();
+    $controller = new Home(unserialize($_SESSION['user']));
+    $controller->saveVehicle();
 });
 
 

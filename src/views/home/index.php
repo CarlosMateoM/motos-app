@@ -46,20 +46,20 @@
         </div>
 
         <div class="vehiculo_container">
-            <form action="">
+            <form action="saveVehicle" method="post">
                 <h2>ingrese la info de su vehiculo</h2>
                 <label for="placa">placa</label>
-                <input type="text" name="" id="placa">
+                <input type="text" name="placa" id="placa">
                 <label for="marca">marca</label>
-                <input type="text" name="" id="marca">
+                <input type="text" name="marca" id="marca">
                 <label for="color">color</label>
-                <input type="text" name="" id="color">
+                <input type="text" name="color" id="color">
                 <label for="tipo">tipo</label>
-                <select name="" id="tipo">
+                <select name="tipo" id="tipo">
                     <option value="moto">moto</option>
                     <option value="carro">carro</option>
                 </select>
-                <label><input type="checkbox" name="" id="">servicio</label>
+                <label><input type="checkbox" name="servicio" id="">servicio</label>
                 <input type="submit" value="enviar">
             </form>
         </div>

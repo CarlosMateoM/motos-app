@@ -4,6 +4,7 @@ namespace Mateo\MotosApp\controllers;
 
 use Mateo\MotosApp\lib\Controller;
 use Mateo\MotosApp\models\User;
+use Mateo\MotosApp\models\Vehicle;
 
 class Home extends Controller
 {
@@ -21,6 +22,38 @@ class Home extends Controller
         User::set_estado(false, $id);
         unset($_SESSION['user']);
         header('location: home');
+    }
+
+    public function saveVehicle()
+    {
+        $idEstudiante = $this->user->getId();
+        $placa = $this->post('placa');
+        $marca = $this->post('marca');
+        $color = $this->post('color');
+        $tipo = $this->post('tipo');
+        $servicio = $this->post('servicio');
+
+        if (empty($placa) || empty($marca) || empty($color)
+            || empty($tipo) || empty($servicio)) {
+            header("location: /motos-app/home?vehicle=empty");
+            exit();
+        }
+
+        $vehicle = new Vehicle(
+            $idEstudiante,
+            $placa,
+            $marca,
+            $color,
+            $tipo
+        );
+
+        if($vehicle->save()){
+            User::setServicio($servicio, $idEstudiante);
+            header("location: /motos-app/home?vehicle=success");
+        }
+
+
+        
     }
 
 

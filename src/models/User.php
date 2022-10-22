@@ -186,4 +186,22 @@ class User extends Model
             
         }
     }
+
+    public static function setServicio(bool $servicio, int $id_est)
+    {
+        try {
+            $db = new Database();
+            $sql = "UPDATE `ESTUDIANTE` SET `SERVICIO`= ? WHERE `idESTUDIANTE` = ?";
+            $query = $db->connect()->prepare($sql);
+            $query->bindParam(1, $servicio, PDO::PARAM_BOOL);
+            $query->bindParam(2, $id_est, PDO::PARAM_INT);
+            $query->execute();
+            
+        } catch (PDOException $e) {
+            echo $id_est;
+            error_log($e->getMessage());
+            throw $e;
+            
+        }
+    }
 }

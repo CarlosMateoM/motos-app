@@ -8,7 +8,7 @@ use Mateo\MotosApp\lib\Model;
 use Mateo\MotosApp\lib\Database;
 
 
-class User extends Model
+class Vehicle extends Model
 {
     private int $idVehiculo;
     private int $idEstudiante;
@@ -31,6 +31,7 @@ class User extends Model
         $this->marca = $marca;
         $this->color = $color;
         $this->tipo = $tipo;
+        parent::__construct();
     }
 
     public function save()
@@ -59,6 +60,17 @@ class User extends Model
             return false;
         }
     }
+
+    public function getIdVehiculo():int
+    {
+        return $this->idVehiculo;
+    }
+
+    public function getIdestudiante():int
+    {
+        return $this->idEstudiante;
+    }
+
 
 
 

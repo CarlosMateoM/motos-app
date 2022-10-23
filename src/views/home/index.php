@@ -64,75 +64,16 @@
             </form>
         </div>
 
-        <div class='main_container'>
-            <div>
-                <h2 class='title' style='font-size:14px; background-color: #000035;'>compañeros disponibles</h2>
-            </div>
-
-            <?php
-
-            use  \Mateo\MotosApp\lib\Database;
-
-            $db = new Database();
-
-            $con = $db->connect();
-
-            $sql = "SELECT idESTUDIANTE, NOMBRE FROM `ESTUDIANTE` WHERE `ESTADO` LIKE FALSE";
-
-            $query = $con->prepare($sql);
-            $query->execute();
-
-
-
-            $result = $query->fetchAll(PDO::FETCH_NUM);
-
-
-
-            foreach ($result as $row) {
-
-                echo " <div class='card'>
-                    <div class='card_info'>
-                        <div style='width: 60%' class='name_student'>
-                            <strong>" . $row[1] . "</strong>
-                            <br><br>
-    
-                            <img width='50px' src='img/motorbike.png' alt=''>
-    
-                        </div>
-                        <div>
-                            <form action='home/contact' method='post'>
-                                <input type='submit' value='enviar'> 
-                            </form>
-                            <br><br>
-                            <span>$ 8.0000</span>
-                            <br><br>
-                            <strong>3.1 </strong><span style='font-size:10px ;'>Puntuación</span>
-                        </div>
-                    </div>
-                    
-                    <div class='card_roads' >
-                        <div class='road_title' >
-                            <strong class='road_title'>rutas</strong>
-                        </div>
-                        <span class='rutas' >cerete</span>
-                        <span class='rutas' >cerete</span>
-                        <span class='rutas' >cerete</span>
-    
-                    </div>
-                </div>";
-            }
-
-
-
-
-
-            ?>
-
+        <div id="main-container" class='main_container'>
+            
         </div>
     </main>
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="javascript/home/script.js"></script>
 </body>
 

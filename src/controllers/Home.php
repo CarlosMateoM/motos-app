@@ -19,7 +19,7 @@ class Home extends Controller
 
     public function log_out() {
         $id =  $this->user->getId();
-        User::set_estado(false, $id);
+        User::setUserEstado(false, $id);
         unset($_SESSION['user']);
         header('location: home');
     }
@@ -54,6 +54,11 @@ class Home extends Controller
 
 
         
+    }
+
+    public function getUserConnectedToWork():string
+    {
+        return User::getUsersConnectedToWork();
     }
 
 

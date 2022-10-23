@@ -48,6 +48,13 @@ $router->get('/home', function(){
     $controller->render('home/index');
 });
 
+$router->post('/home/activeUsers', function(){
+    require_authentication();
+    $controller = new Home(unserialize($_SESSION['user']));
+    echo $controller->getUserConnectedToWork();
+});
+
+
 
 $router->post('/logout', function(){
     require_authentication();

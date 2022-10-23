@@ -25,23 +25,23 @@ class Login extends Controller
             exit();
         }
 
-        $user = User::get_user($username);
-
-        $hash_password = $user->getPassword();
-
-        if(is_null($user)){
+        $user = User::getUser($username);
+        
+        if($user->getId() == -1){
             header("location: /motos-app/login?login=incorrect_credentials&username=$username");
             exit();
         }
 
+        $hash_password = $user->getPassword();
+        
         if(password_verify($password, $hash_password)){
             session_start();
             $_SESSION['user'] = serialize($user);
-            User::set_estado(true, $user->getId());
+            User::setUserEstado(true, $user->getId());
             header("location: /motos-app/home");
             exit();
         }else {
-            header("location: /motos-app/login?login=wrong_password&username=$username");
+            header("location: /motos-app/login?login=incorrect_credentials&username=$username");
         }
         
 

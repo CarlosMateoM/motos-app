@@ -50,12 +50,12 @@ class User extends Model
         $this->id = $id;
     }
 
-    public function getId():int
+    public function getId(): int
     {
         return $this->id;
     }
 
-
+    
     public function setEstado(bool $estado)
     {
         $this->estado = $estado;
@@ -66,22 +66,23 @@ class User extends Model
         $this->date = $date;
     }
 
-    public function getPassword():string
+    public function getPassword(): string
     {
         return $this->password;
     }
 
-    
+
 
 
     public function save()
     {
         try {
 
-            $sql = "INSERT INTO `ESTUDIANTE`(`USUARIO`, `PASSWORD_2`, `TELEFONO`, `ID_POWERCAMPUS`, `FECHA_CREACION_USUARIO`, `NOMBRE`, `EMAIL`, `ESTADO`, `IDENTIFICACION`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO `ESTUDIANTE`(`USUARIO`, `PASSWORD_2`, `TELEFONO`, `ID_POWERCAMPUS`, `FECHA_CREACION_USUARIO`, `NOMBRE`, `EMAIL`, `ESTADO`, `IDENTIFICACION`, `SERVICIO`, `CUENTA_ACTIVA`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $query = $this->prepare($sql);
 
             $pass = $this->get_has_password();
+            $boolena = false;
 
             $query->bindParam(1, $this->username, PDO::PARAM_STR);
             $query->bindParam(2, $pass, PDO::PARAM_STR);
@@ -92,6 +93,9 @@ class User extends Model
             $query->bindParam(7, $this->email, PDO::PARAM_STR);
             $query->bindParam(8, $this->estado, PDO::PARAM_INT);
             $query->bindParam(9, $this->identificacion, PDO::PARAM_STR);
+            $query->bindParam(10, $boolena, PDO::PARAM_BOOL);
+            $query->bindParam(11, $boolena, PDO::PARAM_BOOL);
+
 
             $query->execute();
             return true;
@@ -129,7 +133,7 @@ class User extends Model
         }
     }
 
-    public static function get_user(string $username): User
+    public static function getUser(string $username): User
     {
         try {
             $db = new Database();
@@ -138,13 +142,13 @@ class User extends Model
             $query->bindParam(1, $username, PDO::PARAM_STR);
             $query->execute();
             $rows = $query->rowCount();
-            
-            if ($rows == 0) {
-                return null;
-            }else {
-   
+
+            //if ($rows == 0) {
+            //  return null;
+            //}else {
+            if ($rows > 0) {
                 $data = $query->fetchAll(PDO::FETCH_NUM);
-                
+
                 $row = $data[0];
 
                 $user = new User(
@@ -156,20 +160,20 @@ class User extends Model
                     $row[7],
                     $row[2]
                 );
-                
+
                 $user->setDate($row[5]);
                 $user->setId($row[0]);
-                
+
                 return $user;
             }
+            return new User(-1, "null", "null", "null", "null", "null", "null");
         } catch (PDOException $e) {
             error_log($e->getMessage());
             throw $e;
-            return false;
         }
     }
 
-    public static function set_estado(bool $estado, int $id_est)
+    public static function setUserEstado(bool $estado, int $id_est)
     {
         try {
             $db = new Database();
@@ -178,12 +182,10 @@ class User extends Model
             $query->bindParam(1, $estado, PDO::PARAM_BOOL);
             $query->bindParam(2, $id_est, PDO::PARAM_INT);
             $query->execute();
-            
         } catch (PDOException $e) {
             echo $id_est;
             error_log($e->getMessage());
             throw $e;
-            
         }
     }
 
@@ -196,12 +198,48 @@ class User extends Model
             $query->bindParam(1, $servicio, PDO::PARAM_BOOL);
             $query->bindParam(2, $id_est, PDO::PARAM_INT);
             $query->execute();
-            
         } catch (PDOException $e) {
             echo $id_est;
             error_log($e->getMessage());
             throw $e;
-            
+        }
+    }
+
+
+    public static function getUsersConnectedToWork():string
+    {
+        try {
+            $db = new Database();
+            $sql = "SELECT * FROM `ESTUDIANTE` WHERE `SERVICIO` LIKE TRUE AND `ESTADO` LIKE TRUE;";
+            $query = $db->connect()->prepare($sql);
+            $query->execute();
+
+            $data = $query->fetchAll(PDO::FETCH_NUM);
+
+            $json = array();
+            foreach($data as $row){
+                $json[] = array(
+                    'idEstudiante' => $row[0],
+                    'usuario' => $row[1],
+                    'password' => $row[2],
+                    'telefono' => $row[3],
+                    'idPowerCampus' => $row[4],
+                    'fechaCreacion' => $row[5],
+                    'nombre' => $row[6],
+                    'email' => $row[7],
+                    'estado' => $row[8],
+                    'identificacion' => $row[9],
+                    'servicio' => $row[10],
+                    'cuentaActiva' => $row[11],
+                );
+            }
+
+            $jsonString = json_encode($json);
+            return $jsonString;
+
+        } catch (PDOException $e) {
+            error_log($e->getMessage());
+            throw $e;
         }
     }
 }

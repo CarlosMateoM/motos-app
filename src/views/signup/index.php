@@ -143,7 +143,8 @@
                     <input type="password" id="password" name="re-password" required="" value="123456">
                     <label for="password">Repeat password</label>
                 </div>
-
+               <div class="BRegisterLink">
+                
                 <div class="button-join">
                     <input type="submit" id="join" name="register-btn" value="Register">
                 </div>
@@ -151,6 +152,7 @@
                 <div class="SignIn-content">
                     <span id="SignIn">do you already have an account?</span>
                     <a href="login">Sing in</a>
+                </div>
                 </div>
             </form>
         </div>

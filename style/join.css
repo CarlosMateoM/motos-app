@@ -4,17 +4,20 @@
 
 body{
     background-color: #0D1117;
-    font-family: var(--font-style);
-    
+    font-family: var(--font-style);    
+}
+
+main{
+    display: flex;
+    height: 100vh;
 }
 
 .join-box{
-    position: absolute;
+    margin: auto;
     top: 8%;
     left: 28%;
     width: 400px;
     padding: 5%;
-    transform: (-50% -50%);
     background: #161B22;
     border-radius: 10px;
 }
@@ -83,7 +86,7 @@ body{
 .button-join{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 #SignIn{
@@ -94,6 +97,8 @@ body{
     width: 60px;
     text-align: center;
 }
+
+
 
 .SignIn-content a{
     margin: auto;

@@ -105,3 +105,13 @@ main{
     color: #04BF9D;
     text-decoration: none;
 }
+
+.join-box .join-input input:invalid{
+    border-bottom: 1px solid red;
+}
+
+
+.join-box .join-input label{
+    color: red;
+}
+

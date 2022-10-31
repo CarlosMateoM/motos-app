@@ -102,8 +102,15 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    font-size: 21px;
+    font-size: 18px;
+    font-weight: bold;
     color: #fff;
+}
+
+.info-main{
+    display: flex;
+    flex-direction: row;
+    column-gap: 150px;
 }
 
 .inf-content{
@@ -124,6 +131,23 @@ p{
     font-weight: bold;
     background-color: #FFE600;
     border-radius: 5px;
+}
+
+.button-content a{
+    margin: auto;
+    padding: 7px 20px;
+    font-size: 16px;
+    color: var(--EnfacisText);
+    border: 1px solid var(--EnfacisText);
+    background: var(--backgroundColor);
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.button-content a:hover{
+    background: var(--EnfacisText);
+    color: black;
 }
 
 .list-routes{

@@ -126,11 +126,3 @@ main {
 .error {
     color: rgb(255, 37, 37);
 }
-
-.login-box .user-box input:invalid{
-    border-bottom: 1px solid rgb(233, 14, 14);
-}
-
-..login-box .user-box label:invalid{
-    color: red;
-}

@@ -130,3 +130,14 @@ Stack trace:
 [24-Oct-2022 18:18:19 Europe/Berlin] Hello, errors!
 [24-Oct-2022 18:18:48 Europe/Berlin] Hello, errors!
 [24-Oct-2022 18:19:40 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:05:06 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:05 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:10 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:15 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:22 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:22 Europe/Berlin] PHP Parse error:  syntax error, unexpected double-quoted string "", expecting "," or ";" in D:\Xampp\htdocs\motos-app\src\views\signup\index.php on line 72
+[25-Oct-2022 02:16:25 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:17:46 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:17:52 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:18:27 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:28:55 Europe/Berlin] Hello, errors!

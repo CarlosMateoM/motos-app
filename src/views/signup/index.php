@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Create Account</title>
+    <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="./style/join.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,9 +70,9 @@
                 <?php 
                     
                     if(isset($_GET['id'])){
-                        echo "<input type='number' id='DNI' name='id_identificacion' required='' value=".$_GET['id'].">";
+                        echo "<input type='number' id='DNI' name='id_identificacion' required='' value=''".$_GET['id'].">";
                     }else {
-                        echo "<input type='number' id='DNI' name='id_identificacion' required='' >";
+                        echo "<input type='number' id='DNI' name='id_identificacion' required=''  >";
                     }
                     
                     ?>
@@ -143,7 +144,8 @@
                     <input type="password" id="password" name="re-password" required="" value="123456">
                     <label for="password">Repeat password</label>
                 </div>
-
+               <div class="BRegisterLink">
+                
                 <div class="button-join">
                     <input type="submit" id="join" name="register-btn" value="Register">
                 </div>
@@ -151,6 +153,7 @@
                 <div class="SignIn-content">
                     <span id="SignIn">do you already have an account?</span>
                     <a href="login">Sing in</a>
+                </div>
                 </div>
             </form>
         </div>

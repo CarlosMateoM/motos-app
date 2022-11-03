@@ -1,0 +1,143 @@
+[22-Oct-2022 05:05:23 Europe/Berlin] Hello, errors!
+[22-Oct-2022 05:05:23 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in D:\Xampp\htdocs\motos-app\index.php on line 15
+[22-Oct-2022 05:05:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='D:\Xampp\php\PEAR') in D:\Xampp\htdocs\motos-app\index.php:15
+Stack trace:
+#0 {main}
+  thrown in D:\Xampp\htdocs\motos-app\index.php on line 15
+[22-Oct-2022 05:08:05 Europe/Berlin] Hello, errors!
+[22-Oct-2022 05:08:05 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in D:\Xampp\htdocs\motos-app\index.php on line 15
+[22-Oct-2022 05:08:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='D:\Xampp\php\PEAR') in D:\Xampp\htdocs\motos-app\index.php:15
+Stack trace:
+#0 {main}
+  thrown in D:\Xampp\htdocs\motos-app\index.php on line 15
+[22-Oct-2022 05:08:10 Europe/Berlin] Hello, errors!
+[22-Oct-2022 05:08:10 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in D:\Xampp\htdocs\motos-app\index.php on line 15
+[22-Oct-2022 05:08:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='D:\Xampp\php\PEAR') in D:\Xampp\htdocs\motos-app\index.php:15
+Stack trace:
+#0 {main}
+  thrown in D:\Xampp\htdocs\motos-app\index.php on line 15
+[23-Oct-2022 01:08:24 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:08:33 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:12:32 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:12:49 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:13:29 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:13:37 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:13:37 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\Xampp\htdocs\motos-app\src\controllers\Login.php on line 38
+[23-Oct-2022 01:13:37 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:15:06 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:15:07 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:15:07 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:18:40 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:18:41 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in D:\Xampp\htdocs\motos-app\src\controllers\Login.php on line 38
+[23-Oct-2022 01:18:41 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:18:58 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:18:58 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:18:58 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:22:35 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:22:38 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:23:13 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:23:38 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:29:20 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:31:00 Europe/Berlin] Hello, errors!
+[23-Oct-2022 01:59:37 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:00:10 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:00:18 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:03:06 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:03:09 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:03:28 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:04:15 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:04:43 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:05:00 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:05:03 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:06:52 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:08:12 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:08:18 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:11:16 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:12:10 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:12:12 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:15:35 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:15:37 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:15:37 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:15:39 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:29 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:31 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:31 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:32 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:32 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:32 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:32 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:33 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:33 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:33 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:16:48 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:25:22 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:27:27 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:27:58 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:28:49 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:29:17 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:30:13 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:32:05 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:32:10 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:32:13 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:32:40 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:33:47 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:34:10 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:34:35 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:35:52 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:36:14 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:36:37 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:39:35 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:39:36 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:39:52 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:40:09 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:41:21 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:41:34 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:42:07 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:43:19 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:44:48 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:44:54 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:45:13 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:45:22 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:45:28 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:49:59 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:52:39 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:53:33 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:53:41 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:54:46 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:55:26 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:56:08 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:56:16 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:56:25 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:57:26 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:58:41 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:59:25 Europe/Berlin] Hello, errors!
+[23-Oct-2022 02:59:48 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:02:25 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:02:51 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:03:14 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:03:22 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:03:29 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:03:42 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:03:53 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:04:06 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:04:38 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:05:04 Europe/Berlin] Hello, errors!
+[23-Oct-2022 03:15:53 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:13:08 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:16:15 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:17:21 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:17:22 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:18:19 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:18:48 Europe/Berlin] Hello, errors!
+[24-Oct-2022 18:19:40 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:05:06 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:05 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:10 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:15 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:22 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:14:22 Europe/Berlin] PHP Parse error:  syntax error, unexpected double-quoted string "", expecting "," or ";" in D:\Xampp\htdocs\motos-app\src\views\signup\index.php on line 72
+[25-Oct-2022 02:16:25 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:17:46 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:17:52 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:18:27 Europe/Berlin] Hello, errors!
+[25-Oct-2022 02:28:55 Europe/Berlin] Hello, errors!

@@ -205,6 +205,27 @@ class User extends Model
         }
     }
 
+    public static function sendRequestService(int $idSender, int $idReceiver):bool
+    {
+        try {
+            $db = new Database();
+            $sql = "INSERT INTO `RUTA`( `ESTUDIANTE_idESTUDIANTE`, `COMPANERO_RUTA`, `SOLICITUD`) VALUES (?, ?, ?)";
+            $query = $db->connect()->prepare($sql);
+            $solicitud = true;
+            $query->bindParam(1, $idSender, PDO::PARAM_INT);
+            $query->bindParam(2, $idReceiver, PDO::PARAM_INT);
+            $query->bindParam(3, $solicitud, PDO::PARAM_BOOL);
+            $query->execute();
+            if($query){
+                return true;
+            }
+            return false;
+        } catch (PDOException $e) {
+            error_log($e->getMessage());
+            throw $e;
+        }
+    }
+
 
     public static function getUsersConnectedToWork():string
     {
@@ -237,6 +258,28 @@ class User extends Model
             $jsonString = json_encode($json);
             return $jsonString;
 
+        } catch (PDOException $e) {
+            error_log($e->getMessage());
+            throw $e;
+        }
+    }
+
+
+    public static function receiveServiceRequest(int $id):int
+    {
+        try {
+            $db = new Database();
+            $sql = "SELECT * FROM `RUTA` WHERE `COMPANERO_RUTA` LIKE ? AND `SOLICITUD`LIKE TRUE";
+            $query = $db->connect()->prepare($sql);
+            $query->bindParam(1, $id, PDO::PARAM_INT);
+            $query->execute();
+            if($query->rowCount() > 0){
+                $data = $query->fetchAll(PDO::FETCH_NUM);
+                $row = $data[0];
+                return $row[1];
+            }else {
+                return -1;
+            }
         } catch (PDOException $e) {
             error_log($e->getMessage());
             throw $e;

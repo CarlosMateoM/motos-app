@@ -61,6 +61,17 @@ class Home extends Controller
         return User::getUsersConnectedToWork();
     }
 
+    public function sendRequestService()
+    {
+        $id = $this->post('id');
+        return User::sendRequestService($this->user->getId(), $id);
+    }
+
+    public function receiveServiceRequest():int
+    {
+        return User::receiveServiceRequest($this->user->getId());
+    }
+
 
 
 }

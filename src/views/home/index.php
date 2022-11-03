@@ -6,7 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='style/style.css'>
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -65,15 +66,29 @@
         </div>
 
         <div id="main-container" class='main_container'>
-            
+
         </div>
+
+        <div class="request-service">
+            <h2>solicitud de servicio</h2>
+            <div class="request-service_options">
+                <button id="accept-service-request-btn">
+                    aceptar
+                </button>
+                <button id="declien-service-request-btn" style="background-color: red ;">
+                    rechazar
+                </button>
+            </div>
+        </div>
+
+
+
+
     </main>
     <footer>
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="javascript/home/script.js"></script>
 </body>
 

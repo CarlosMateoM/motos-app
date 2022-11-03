@@ -185,3 +185,33 @@ button {
     color: white;
     text-align: center;
 }
+
+
+
+
+
+
+
+.request-service h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.request-service{
+    bottom: 0px;
+    left: -400px;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 5px;
+    background-color: #0d1117;
+    width: 400px;
+    height: 100px;
+    position: fixed;
+}
+
+.request-service_options {
+    width: 55%;
+    margin: auto;
+}
+

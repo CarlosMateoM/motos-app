@@ -21,58 +21,115 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 
-$(function(){
-    console.log("hello word");
-});
+$(document).ready(function () {
 
-function getUserActiveToWork(){
+    function getUserActiveToWork() {
 
-$.ajax({
-    url: 'home/activeUsers',
-    type: 'POST',
-    success: function(response){
-        let users = JSON.parse(response);
-        let template = "";
-        users.forEach(user => {
-            template += `<div class='card'>
-            <div class='card_info'>
-                <div style='width: 60%' class='name_student'>
-                    <strong> ${user.nombre} </strong>
-                    <br><br>
-
-                    <img width='50px' src='img/motorbike.png' alt=''>
-
+        $.ajax({
+            url: 'home/activeUsers',
+            type: 'POST',
+            success: function (response) {
+                let users = JSON.parse(response);
+                let template = "";
+                users.forEach(user => {
+                    template += `<div class='card'>
+                <div class='card_info'>
+                    <div style='width: 60%' class='name_student'>
+                        <strong> ${user.nombre} </strong>
+                        <br><br>
+                        <strong id='id-estudiante'> ${user.telefono} </strong>
+    
+    
+                        <img width='50px' src='img/motorbike.png' alt=''>
+    
+                    </div>
+                    <div>
+                        <form class='contact-student' action='hola'>
+                            <strong> ${user.idEstudiante} </strong>
+                            <input class='contact-student' type='submit' value='contactar'> 
+                        </form>
+                        <br><br>
+                        <span>$ 8.0000</span>
+                        <br><br>
+                        <strong>3.1 </strong><span style='font-size:10px ;'>Puntuación</span>
+                    </div>
                 </div>
-                <div>
-                    <form action='home/contact' method='post'>
-                        <input type='submit' value='enviar'> 
-                    </form>
-                    <br><br>
-                    <span>$ 8.0000</span>
-                    <br><br>
-                    <strong>3.1 </strong><span style='font-size:10px ;'>Puntuación</span>
+                
+                <div class='card_roads' >
+                    <div class='road_title' >
+                        <strong class='road_title'>rutas</strong>
+                    </div>
+                    <span class='rutas' >cerete</span>
+                    <span class='rutas' >cerete</span>
+                    <span class='rutas' >cerete</span>
+    
                 </div>
-            </div>
-            
-            <div class='card_roads' >
-                <div class='road_title' >
-                    <strong class='road_title'>rutas</strong>
-                </div>
-                <span class='rutas' >cerete</span>
-                <span class='rutas' >cerete</span>
-                <span class='rutas' >cerete</span>
+            </div>`;
+                });
 
-            </div>
-        </div>`;
+                $('#main-container').html(template);
+
+                $('.contact-student').submit(function (e) {
+                    console.log('submit');
+                    let id = $(this).children()[0].innerHTML;
+                    $.post(
+                        'sendRequestService',
+                        { id },
+                        function (response) {
+                            console.log(response);
+                        });
+                    e.preventDefault();
+                });
+            }
         });
 
-        $('#main-container').html(template);
+
+
     }
-});
 
-}
 
-setInterval(function(){getUserActiveToWork()},1000);
+    function receiveServiceRequest() {
+
+        $.ajax({
+            url: 'receiveServiceRequest',
+            type: 'POST',
+            success: function (response) {
+                let requestForm = $('.request-service');
+                if (response != -1) {
+                    requestForm.css('left', '0px');
+                } else {
+                    if(requestForm.css('left') != '-400px'){
+                        requestForm.css('left', '-400px');
+                    }
+                }
+            }
+        });
+
+    }
+
+    setInterval(function () { getUserActiveToWork() }, 1000);
+    setInterval(function () { receiveServiceRequest() }, 1000);
+
+    $('#accept-service-request-btn').click(function(){
+        
+    });
+
+
+    console.log('documento listo');
+});//fin de la funcion que prueba si el documento cargó
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

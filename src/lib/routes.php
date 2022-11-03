@@ -21,7 +21,6 @@ function require_authentication(){
     }
 }
 
-
 $router->get('/signup', function(){
     $controller = new Signup;
     $controller->render('signup/index'); 
@@ -54,8 +53,6 @@ $router->post('/home/activeUsers', function(){
     echo $controller->getUserConnectedToWork();
 });
 
-
-
 $router->post('/logout', function(){
     require_authentication();
     $controller = new Home(unserialize($_SESSION['user']));
@@ -67,6 +64,20 @@ $router->post('/saveVehicle', function(){
     $controller = new Home(unserialize($_SESSION['user']));
     $controller->saveVehicle();
 });
+
+$router->post('/sendRequestService', function(){
+    require_authentication();
+    $controller = new Home(unserialize($_SESSION['user']));
+    $controller->sendRequestService();
+});
+
+$router->post('/receiveServiceRequest', function(){
+    require_authentication();
+    $controller = new Home(unserialize($_SESSION['user']));
+    echo $controller->receiveServiceRequest();
+});
+
+
 
 
 $router->run(); 

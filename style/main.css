@@ -249,5 +249,27 @@ p{
    
 }
 
+@media screen and (min-width:50px) and (max-width:480px){
+    .main-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .section-cards{
+        height: 100vh;
+        width: auto;
+    }
+
+    .section-menu{
+        height: auto;
+        width: auto;
+        border: none;
+    }
+
+    .option-list{
+        display: flex;
+        flex-direction: row;
+    }
+
 
 

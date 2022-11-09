@@ -26,6 +26,7 @@ p{
 .main-content{
     display: flex;
     flex-direction: row;
+   
 }
 
 .section-menu{
@@ -74,17 +75,20 @@ p{
 .section-cards{
     display: flex;
     flex-direction: column;
-    align-content: center ;
-    width: 100vw;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    flex-grow: 1;
+    width: auto;
+    
 }
 
 .card-content{
-    margin: 10px 400px;
     display: flex;
     flex-direction: column;
     background-color: var(--backgroundCards);
     border-radius: 10px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .general-content{
@@ -191,7 +195,6 @@ p{
 }
 
 .routes-content{
-  
     display: flex;
     flex-direction: row;
     width: 389px;
@@ -279,6 +282,9 @@ p{
         display: flex;
         flex-direction: row;
     }
+
+
+
 
 
 }

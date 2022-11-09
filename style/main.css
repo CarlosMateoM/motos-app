@@ -260,11 +260,20 @@ p{
         width: auto;
     }
 
+
     .section-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         height: auto;
         width: auto;
         border: none;
     }
+
+    .title-opcion{
+        display: none;
+    }
+
 
     .option-list{
         display: flex;
@@ -272,4 +281,4 @@ p{
     }
 
 
-
+}

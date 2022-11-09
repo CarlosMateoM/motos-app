@@ -5,12 +5,20 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='style/style.css'>
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel='stylesheet' href='style/main.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>Home</title>
     <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
+    <!--
     <header id='header'>
 
         <h1 class='title'>Compañero de Ruta</h1>
@@ -22,6 +30,7 @@
         </button>
 
     </header>
+
 
     <nav id="nav" class="nav">
         <div class="img_container">
@@ -36,17 +45,22 @@
         </div>
     </nav>
 
+    <div class='welcome_message'>
+<?php
+
+//echo '<span>Bienvenido, Carlos Mateo</span>'
+
+?>
+
+</div>
+
+
+    -->
+
     <main class='main'>
-        <div class='welcome_message'>
-            <?php
 
-            echo '<span>Bienvenido, Carlos Mateo</span>'
 
-            ?>
-
-        </div>
-
-        <div class="vehiculo_container">
+        <div class="vehiculo_container" style="display: none">
             <form action="saveVehicle" method="post">
                 <h2>ingrese la info de su vehiculo</h2>
                 <label for="placa">placa</label>
@@ -65,10 +79,11 @@
             </form>
         </div>
 
-        <div id="main-container" class='main_container'>
+        <!-- termina el formulario del vehiculo -->
 
-        </div>
-
+        <div id="main-container" class='main_container'></div>
+        
+        <!-- 
         <div class="request-service">
             <h2>solicitud de servicio</h2>
             <div class="request-service_options">
@@ -82,7 +97,7 @@
         </div>
 
 
-
+-->
 
     </main>
     <footer>

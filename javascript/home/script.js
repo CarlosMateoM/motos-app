@@ -32,40 +32,60 @@ $(document).ready(function () {
                 let users = JSON.parse(response);
                 let template = "";
                 users.forEach(user => {
-                    template += `<div class='card'>
-                <div class='card_info'>
-                    <div style='width: 60%' class='name_student'>
-                        <strong> ${user.nombre} </strong>
-                        <br><br>
-                        <strong id='id-estudiante'> ${user.telefono} </strong>
-    
-    
-                        <img width='50px' src='img/motorbike.png' alt=''>
-    
+                    template += `
+            <article class="profile-card">
+
+            <div class="info-content">
+
+                <figure class="img-content">
+                    <img class="img-card" src="img/wallpaperflare.com_wallpaper (1).jpg">
+                </figure>
+
+                <div class="score-rate">
+                    <div class="score-inf">
+                        <h3>5.0</h3>
+                        <p>Puntos</p>
                     </div>
-                    <div>
-                        <form class='contact-student' action='hola'>
-                            <strong> ${user.idEstudiante} </strong>
-                            <input class='contact-student' type='submit' value='contactar'> 
-                        </form>
-                        <br><br>
-                        <span>$ 8.0000</span>
-                        <br><br>
-                        <strong>3.1 </strong><span style='font-size:10px ;'>Puntuación</span>
+                    <div class="rate-inf">
+                        <h3>6K</h3>
+                        <p>Tarifa</p>
                     </div>
                 </div>
-                
-                <div class='card_roads' >
-                    <div class='road_title' >
-                        <strong class='road_title'>rutas</strong>
-                    </div>
-                    <span class='rutas' >cerete</span>
-                    <span class='rutas' >cerete</span>
-                    <span class='rutas' >cerete</span>
-    
+            </div>
+
+            <div class="contact-content">
+
+                <div class="name-content">
+                    <span class="name">${user.nombre}</span><br>
+                    <p class="IDP">ID00000${user.idEstudiante}</p>
                 </div>
-            </div>`;
-                });
+                <div class="button-content">
+                    <a class="contact-button" href="#">Contactar</a>
+                </div>
+            </div>
+
+            <div class="block-routes">
+
+                <div class="title-rout">
+                    <span>Rutas:</span>
+                </div>
+
+                <div class="routes-content">
+
+                    <ul class="list-routes">
+                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
+                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
+                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
+                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
+                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
+                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </article>`;});
 
                 $('#main-container').html(template);
 
@@ -98,10 +118,11 @@ $(document).ready(function () {
                 if (response != -1) {
                     requestForm.css('left', '0px');
                 } else {
-                    if(requestForm.css('left') != '-400px'){
+                    if (requestForm.css('left') != '-400px') {
                         requestForm.css('left', '-400px');
                     }
                 }
+                requestForm.css('background', 'green');
             }
         });
 
@@ -110,8 +131,21 @@ $(document).ready(function () {
     setInterval(function () { getUserActiveToWork() }, 1000);
     setInterval(function () { receiveServiceRequest() }, 1000);
 
-    $('#accept-service-request-btn').click(function(){
-        
+    $('#accept-service-request-btn').click(function (e) {
+
+        //codigo para rechazar
+
+
+
+        $.post(
+            'respondToServiceRequest',
+            function () {
+                //console.log(response);
+            });
+
+        e.preventDefault();
+
+
     });
 
 

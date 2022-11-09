@@ -21,6 +21,11 @@ function require_authentication(){
     }
 }
 
+$router->get('/', function(){
+   header('location: home');
+});
+
+
 $router->get('/signup', function(){
     $controller = new Signup;
     $controller->render('signup/index'); 
@@ -76,6 +81,14 @@ $router->post('/receiveServiceRequest', function(){
     $controller = new Home(unserialize($_SESSION['user']));
     echo $controller->receiveServiceRequest();
 });
+
+
+$router->post('/respondToServiceRequest', function(){
+    require_authentication();
+    $controller = new Home(unserialize($_SESSION['user']));
+    echo $controller->respondToServiceRequest();
+});
+
 
 
 

@@ -264,7 +264,6 @@ class User extends Model
         }
     }
 
-
     public static function receiveServiceRequest(int $id):int
     {
         try {
@@ -285,4 +284,28 @@ class User extends Model
             throw $e;
         }
     }
+
+    public static function respondToServiceRequest(bool $answer, int $id)
+    {
+        try {
+            $db = new Database();
+            $sql = "UPDATE `RUTA` SET `SOLICITUD`= 0 WHERE `COMPANERO_RUTA` LIKE ? AND `SOLICITUD`= 1";
+            $query = $db->connect()->prepare($sql);
+            $query->bindParam(1, $id, PDO::PARAM_INT);
+            $query->execute();
+            /*if($query->rowCount() > 0){
+                $data = $query->fetchAll(PDO::FETCH_NUM);
+                $row = $data[0];
+                return $row[1];
+            }else {
+                return -1;
+            }*/
+        } catch (PDOException $e) {
+            error_log($e->getMessage());
+            throw $e;
+        }
+    }
+
+    
+    
 }

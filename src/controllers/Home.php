@@ -72,6 +72,11 @@ class Home extends Controller
         return User::receiveServiceRequest($this->user->getId());
     }
 
+    public function respondToServiceRequest()
+    {
+        return User::respondToServiceRequest(false, $this->user->getId());
+    }
+
 
 
 }

@@ -1,239 +1,110 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='en'>
+
 <head>
-    <meta charset="utf-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name="keywords" content="Rutas, amigo de rutas, unicor">
-    <meta name="robots" content="index.follow">
-    <meta name="author" content="">
-    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
     <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel='stylesheet' href='style/main.css'>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
-
+    <title>Home</title>
+    <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
 </head>
+
 <body>
-    <header class="header-Navegation">
-        <nav class="navegation">
-            
-        </nav>
+    <!--
+    <header id='header'>
+
+        <h1 class='title'>Compañero de Ruta</h1>
+        <form action="/motos-app/logout" method="POST">
+            <input type="submit" value="salir">
+        </form>
+        <button id="btn" class="btn">
+            menu
+        </button>
+
     </header>
-    <main class="main-content">
 
-        <section class="section-menu">
-        <aside class="aside-menu">
-            <ul class="option-list">
-                <li class="opcion-item"><a href="#" class="opcion-button"> <span class="material-icons-outlined">person</span> Profile </a> </li>
-                <li class="opcion-item"><a href="#" class="opcion-button"> <span class="material-icons-outlined">place</span> Routes </a> </li>
-                <li class="opcion-item"><a href="#" class="opcion-button"> <span class="material-icons-outlined">chat</span> Chat </a> </li>
-                <li class="opcion-item"><a href="#" class="opcion-button"> <span class="material-icons-outlined">directions_car_filled</span> Vehicle </a> </li>
-                <li class="opcion-item"><a href="#" class="opcion-button"> <span class="material-icons-outlined"> settings </span> Settings </a> </li>
-                
-            </ul>
-        </aside>
-        </section>
 
-        <section class="section-cards">
-            
-            
-            
-            <article class="card-content">
-            
-           
-            <div class="general-content">
-                <figure class="img-content">
-                    <img class="img-card" src="./../../../img/wallpaperflare.com_wallpaper (1).jpg">
-                </figure>
+    <nav id="nav" class="nav">
+        <div class="img_container">
+            <img src="public/img/avatar.png" alt="avatar">
+        </div>
+        <div class="info_container">
+            <p>Carlos Mateo Martinez Guerra</p>
+            <p>carlosmateo484@gmail.com</p>
+            <p>(301) 248 - 8842</p>
+            <button>Vehiculo</button>
+            <p>12/10/2022</p>
+        </div>
+    </nav>
 
-            <div class="score-rate">
-                <div class="score-inf">
-                    <h3>5.0</h3>
-                    <p>Puntos</p>
-                </div>
-                <div class="rate-inf">
-                    <h3>6K</h3>
-                    <p>Tarifa</p>
-                </div>
+    <div class='welcome_message'>
+<?php
+
+//echo '<span>Bienvenido, Carlos Mateo</span>'
+
+?>
+
+</div>
+
+
+    -->
+
+    <main class='main'>
+
+
+        <div class="vehiculo_container" style="display: none">
+            <form action="saveVehicle" method="post">
+                <h2>ingrese la info de su vehiculo</h2>
+                <label for="placa">placa</label>
+                <input type="text" name="placa" id="placa">
+                <label for="marca">marca</label>
+                <input type="text" name="marca" id="marca">
+                <label for="color">color</label>
+                <input type="text" name="color" id="color">
+                <label for="tipo">tipo</label>
+                <select name="tipo" id="tipo">
+                    <option value="moto">moto</option>
+                    <option value="carro">carro</option>
+                </select>
+                <label><input type="checkbox" name="servicio" id="">servicio</label>
+                <input type="submit" value="enviar">
+            </form>
+        </div>
+
+        <!-- termina el formulario del vehiculo -->
+
+        <div id="main-container" class='main_container'></div>
+        
+        <!-- 
+        <div class="request-service">
+            <h2>solicitud de servicio</h2>
+            <div class="request-service_options">
+                <button id="accept-service-request-btn">
+                    aceptar
+                </button>
+                <button id="declien-service-request-btn" style="background-color: red ;">
+                    rechazar
+                </button>
             </div>
-             </div>
-           
-
-            <div class="Date-content">
-                <div class="name-content">
-                    <span class="name">Javier Eduardo Montes Delgado</span>
-                </div>
-                
-            <div class="info-main">
-                <div class="inf-content">
-                    <span class="IDP">IDP0000000</span>
-                    <span class="placa">F92-G39</span>
-                    
-                </div>
-
-                <div class="button-content">
-                    <a class="contact-button" href="#">Contactar</a>
-                </div>
-
-            </div>
-            </div>
-
-           <div class="block-routes">
-
-            <div class="title-rout">
-                <span>Rutas:</span>
-            </div>
-            
-            <div class="routes-content">
-               
-                <ul class="list-routes">
-                    <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                    <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                    <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                    <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                    <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                    <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                    
-                </ul>
-                
-            </div>
-
-            </div>
-            </article>
-
-            <article class="card-content">
-                <div class="general-content">
-                    <figure class="img-content">
-                        <img class="img-card" src="/img/wallpaperflare.com_wallpaper (1).jpg">
-                    </figure>
-    
-                <div class="score-rate">
-                    <div class="score-inf">
-                        <h3>5.0</h3>
-                        <p>Puntos</p>
-                    </div>
-                    <div class="rate-inf">
-                        <h3>6K</h3>
-                        <p>Tarifa</p>
-                    </div>
-                </div>
-                 </div>
-               
-    
-                <div class="Date-content">
-                    <div class="name-content">
-                        <span class="name">Javier Eduardo Montes Delgado</span>
-                    </div>
-                    
-                <div class="info-main">
-                    <div class="inf-content">
-                        <span class="IDP">IDP0000000</span>
-                        <span class="placa">F92-G39</span>
-                        
-                    </div>
-    
-                    <div class="button-content">
-                        <a class="contact-button" href="#">Contactar</a>
-                    </div>
-    
-                </div>
-                </div>
-    
-               <div class="block-routes">
-    
-                <div class="title-rout">
-                    <span>Rutas:</span>
-                </div>
-                
-                <div class="routes-content">
-                   
-                    <ul class="list-routes">
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        
-                    </ul>
-                    
-                </div>
-    
-                </div>
-            </article>
-
-            <article class="card-content">
-                <div class="general-content">
-                    <figure class="img-content">
-                        <img class="img-card" src="/img/wallpaperflare.com_wallpaper (1).jpg">
-                    </figure>
-    
-                <div class="score-rate">
-                    <div class="score-inf">
-                        <h3>5.0</h3>
-                        <p>Puntos</p>
-                    </div>
-                    <div class="rate-inf">
-                        <h3>6K</h3>
-                        <p>Tarifa</p>
-                    </div>
-                </div>
-                 </div>
-               
-    
-                <div class="Date-content">
-                    <div class="name-content">
-                        <span class="name">Javier Eduardo Montes Delgado</span>
-                    </div>
-                    
-                <div class="info-main">
-                    <div class="inf-content">
-                        <span class="IDP">IDP0000000</span>
-                        <span class="placa">F92-G39</span>
-                        
-                    </div>
-    
-                    <div class="button-content">
-                        <a class="contact-button" href="#">Contactar</a>
-                    </div>
-    
-                </div>
-                </div>
-    
-               <div class="block-routes">
-    
-                <div class="title-rout">
-                    <span>Rutas:</span>
-                </div>
-                
-                <div class="routes-content">
-                   
-                    <ul class="list-routes">
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        <li class="item-routes"><a class="rout" href="#">Cerete</a></li>
-                        
-                    </ul>
-                    
-                </div>
-    
-                </div>
-            </article>
+        </div>
 
 
-        </section>
+-->
+
     </main>
+    <footer>
 
-
-
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="javascript/home/script.js"></script>
 </body>
-
 
 </html>
